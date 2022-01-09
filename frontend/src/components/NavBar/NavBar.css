@@ -1,0 +1,38 @@
+.container {
+  min-height: var(--nav-height);
+  background-color: var(--nav-background);
+  color: var(--font-color);
+  font-size: var(--font-size);
+  display: flex;
+  justify-content: space-between;
+}
+
+.brand {
+  text-decoration: none;
+  color: var(--font-color);
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 20px 30px;
+}
+nav {
+  min-width: 300px;
+}
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+ul li {
+  padding: 20px 30px;
+}
+ul li a {
+  color: var(--font-color);
+  text-decoration: none;
+  padding: 10px;
+  transition: all 0.3s;
+}
+.logout:hover {
+  color: var(--btn-hover-color);
+  background-color: var(--btn-hover-background);
+  border-radius: 15px;
+}

@@ -1,0 +1,8 @@
+.helloMsg {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+  padding: 10px 30px;
+}
