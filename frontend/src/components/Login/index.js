@@ -74,7 +74,7 @@ const Login = () => {
           required
         />
         <label htmlFor="checkbox" className="checkbox-label ">
-          <input type="checkbox" id="checkbox" onChange={handleCheck} />
+          <input type="checkbox" name="checkbox" onChange={handleCheck} />
           Remember Me
         </label>
         {(isLoading && <Spinner />) || (
