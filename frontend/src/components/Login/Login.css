@@ -19,6 +19,8 @@
   padding: 30px;
   border-radius: 10px;
   background-color: var(--form-background);
+}
+.login-title {
   text-align: center;
 }
 .form-input {
@@ -30,6 +32,11 @@
   padding: 10px;
   margin: 10px 0;
 }
+.user-password label {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
 .checkbox-label {
   display: flex;
   width: 140px;
@@ -40,6 +47,9 @@
 .checkbox-label input {
   height: 1.4rem;
   padding: 0 10px;
+}
+.submit-container {
+  text-align: center;
 }
 .submit-btn {
   border: none;

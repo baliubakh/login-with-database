@@ -52,38 +52,57 @@ const Signup = () => {
     <section className="section">
       {errorMsg.length !== 0 && <div className="errorMsg">{errorMsg}</div>}
       <form className="signup-form">
-        <input
-          type="email"
-          ref={emailRef}
-          onChange={() => {
-            setEmail(emailRef.current.value);
-          }}
-          placeholder="Your Email"
-          className="form-input"
-          required
-        />
-        <input
-          type="text"
-          ref={nameRef}
-          onChange={() => {
-            setName(nameRef.current.value);
-          }}
-          placeholder="Your Name"
-          className="form-input"
-          required
-        />
-        <input
-          type="password"
-          ref={passwordRef}
-          onChange={() => {
-            setPassword(passwordRef.current.value);
-          }}
-          placeholder="Password"
-          className="form-input"
-          required
-        />
+        <h1 className="signup-title">Sign up</h1>
+        <label htmlFor="user-email">
+          Email
+          <input
+            type="email"
+            id="user-signup-email"
+            ref={emailRef}
+            onChange={() => {
+              setEmail(emailRef.current.value);
+            }}
+            placeholder="Your Email"
+            className="form-input"
+            required
+          />
+        </label>
+        <label htmlFor="user-signup-name">
+          Name
+          <input
+            type="text"
+            id="user-signup-name"
+            ref={nameRef}
+            onChange={() => {
+              setName(nameRef.current.value);
+            }}
+            placeholder="Your Name"
+            className="form-input"
+            required
+          />
+        </label>
+        <label htmlFor="user-signup-password">
+          Password
+          <input
+            type="password"
+            id="user-signup-password"
+            ref={passwordRef}
+            onChange={() => {
+              setPassword(passwordRef.current.value);
+            }}
+            placeholder="Password"
+            className="form-input"
+            required
+          />
+        </label>
         {(isLoading && <Spinner />) || (
-          <input type="submit" onClick={handleSubmit} className="submit-btn" />
+          <div className="submit-container">
+            <input
+              type="submit"
+              onClick={handleSubmit}
+              className="submit-btn"
+            />
+          </div>
         )}
       </form>
       <span>

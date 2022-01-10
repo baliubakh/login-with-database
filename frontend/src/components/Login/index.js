@@ -53,32 +53,47 @@ const Login = () => {
     <section className="section">
       {errorMsg.length !== 0 && <div className="errorMsg">{errorMsg}</div>}
       <form className="login-form">
-        <input
-          type="email"
-          ref={emailRef}
-          onChange={() => {
-            setEmail(emailRef.current.value);
-          }}
-          placeholder="Your Email"
-          className="form-input"
-          required
-        />
-        <input
-          type="password"
-          ref={passwordRef}
-          onChange={() => {
-            setPassword(passwordRef.current.value);
-          }}
-          placeholder="Password"
-          className="form-input"
-          required
-        />
+        <h1 className="login-title">Log in</h1>
+        <label htmlFor="user-email">
+          Email
+          <input
+            type="email"
+            ref={emailRef}
+            id="user-email"
+            onChange={() => {
+              setEmail(emailRef.current.value);
+            }}
+            placeholder="Your Email"
+            className="form-input"
+            required
+          />
+        </label>
+        <label htmlFor="user-password" className="user-password">
+          Password
+          <input
+            type="password"
+            id="user-password"
+            ref={passwordRef}
+            onChange={() => {
+              setPassword(passwordRef.current.value);
+            }}
+            placeholder="Password"
+            className="form-input"
+            required
+          />
+        </label>
         <label htmlFor="checkbox" className="checkbox-label ">
-          <input type="checkbox" name="checkbox" onChange={handleCheck} />
+          <input type="checkbox" id="checkbox" onChange={handleCheck} />
           Remember Me
         </label>
         {(isLoading && <Spinner />) || (
-          <input type="submit" onClick={handleSubmit} className="submit-btn" />
+          <div className="submit-container">
+            <input
+              type="submit"
+              onClick={handleSubmit}
+              className="submit-btn"
+            />
+          </div>
         )}
       </form>
       <span>
